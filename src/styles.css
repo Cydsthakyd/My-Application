@@ -100,3 +100,6 @@ body {
 #city {
   font-size: 35px;
 }
+a {
+  text-decoration: none;
+}
