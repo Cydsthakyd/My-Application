@@ -100,7 +100,8 @@ body {
 #city {
   font-size: 35px;
 }
-a {
+a .name {
   text-decoration: none;
   color: white;
+  font-size: 20px;
 }
