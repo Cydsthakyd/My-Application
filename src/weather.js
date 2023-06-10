@@ -39,7 +39,8 @@ function searches(zipcode) {
     let Urls = `https://api.openweathermap.org/data/2.5/weather?zip=${zipcode}&appid=${api}`;
 
     axios.get(Urls).then(showWeather);
-    console.log(zipcode);
+
+    console.log(searches);
 }
 
 
