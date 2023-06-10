@@ -89,8 +89,7 @@ function showWeather(displayWeather) {
 //Display ZipCodes
 function showZipcode(ShowZipcode) {
     let zipCodess = document.querySelector("#zipcodes");
-    debugger;
-    zipCodess.innerHTML = `${zip}`;
+    zipCodess.innerHTML = `${ShowZipcode.zip}`;
 }
 
 let searchFrom = document.querySelector("#searchForm");
