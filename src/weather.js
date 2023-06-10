@@ -38,7 +38,7 @@ function searches(zipcode) {
     let api = "eaaeb210e95dc9ef485c92b37c060c09"
     let Urls = `https://api.openweathermap.org/data/2.5/weather?zip=${zipcode}&appid=${api}`;
 
-    axios.get(Urls).then(showWeather);
+    axios.get(Urls).then(showZipcode);
 
     console.log(zipcode);
 }
@@ -77,17 +77,21 @@ function showWeather(displayWeather) {
     let description = document.querySelector("#tempDescript");
     let humidity = document.querySelector("#humid");
     let windElement = document.querySelector("#slowWind");
-    let zipCodes = document.querySelector("#zipcodes")
     document.querySelector("#city").innerHTML = displayWeather.data.name;
     document.querySelector("#secondCity").innerHTML = `${displayWeather.data.name} `;
-
-
 
     temperatureElement.innerHTML = `${temperature}`;
     windElement.innerHTML = `Wind ${WindyTemp} mph`;
     humidity.innerHTML = `Humidity ${displayWeather.data.main.humidity}%`;
     description.innerHTML = displayWeather.data.weather[0].description;
 }
+
+//Display ZipCodes
+function showZipcode(displayZipCode); {
+    let zipCodess = document.querySelector("#zipcodes");
+    zipCodess.innerHTML = `${zip}`;
+}
+
 let searchFrom = document.querySelector("#searchForm");
 searchFrom.addEventListener("submit", changeCity);
 
