@@ -37,7 +37,9 @@ function search(city) {
 function searches(zipcode) {
     let api = "eaaeb210e95dc9ef485c92b37c060c09"
     let Urls = `https://api.openweathermap.org/data/2.5/weather?zip=${zipcode}&appid=${api}`;
+
     axios.get(Urls).then(showWeather);
+    console.log(zipcode);
 }
 
 
@@ -83,7 +85,7 @@ function showWeather(displayWeather) {
     document.querySelector("#secondCity").innerHTML = `${displayWeather.data.name} `;
 
 
-    zipCodes.innerHTML = `${}`
+
     temperatureElement.innerHTML = `${temperature}`;
     windElement.innerHTML = `Wind ${WindyTemp} mph`;
     humidity.innerHTML = `Humidity ${displayWeather.data.main.humidity}%`;
