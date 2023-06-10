@@ -40,7 +40,7 @@ function searches(zipcode) {
 
     axios.get(Urls).then(showWeather);
 
-    console.log(searches);
+    console.log(zipcode);
 }
 
 
@@ -56,10 +56,6 @@ function searchCurrentLocation(position) {
     let Url = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&appid=${apiKey}&lon=${position.coords.longitude}&units=imperial`;
     axios.get(Url).then(showWeather);
 }
-
-
-
-
 
 
 //Search cities using the search bar
