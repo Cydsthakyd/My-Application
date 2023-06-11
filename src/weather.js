@@ -83,6 +83,7 @@ function showWeather(displayWeather) {
     let description = document.querySelector("#tempDescript");
     let humidity = document.querySelector("#humid");
     let windElement = document.querySelector("#slowWind");
+    let iconElement = document.querySelector("#icon");
     document.querySelector("#city").innerHTML = displayWeather.data.name;
     document.querySelector("#secondCity").innerHTML = `${displayWeather.data.name} `;
 
@@ -90,6 +91,7 @@ function showWeather(displayWeather) {
     windElement.innerHTML = `Wind ${WindyTemp} mph`;
     humidity.innerHTML = `Humidity ${displayWeather.data.main.humidity}%`;
     description.innerHTML = displayWeather.data.weather[0].description;
+    iconElement.setAttribute("class", 'https://openweathermap.org/img/wn/10d@2x.png');
 }
 
 
