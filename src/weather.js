@@ -91,7 +91,7 @@ function showWeather(displayWeather) {
     windElement.innerHTML = `Wind ${WindyTemp} mph`;
     humidity.innerHTML = `Humidity ${displayWeather.data.main.humidity}%`;
     description.innerHTML = displayWeather.data.weather[0].description;
-    iconElement.setAttribute("src", 'https://openweathermap.org/img/wn/10d@2x.png');
+    iconElement.setAttribute("src", `https://openweathermap.org/img/wn/${displayWeather.data.weather[0].com}@2x.png`);
 }
 
 
