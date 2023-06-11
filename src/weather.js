@@ -85,13 +85,6 @@ function showWeather(displayWeather) {
     description.innerHTML = displayWeather.data.weather[0].description;
 }
 
-//Display ZipCodes
-function showZipcode(ShowZipcodes) {
-    let zipCodess = document.querySelector("#zipcodes");
-    let cityInput = document.querySelector("#searchCities").value;
-    zipCodess.innerHTML = cityInput.value;
-}
-
 let searchFrom = document.querySelector("#searchForm");
 searchFrom.addEventListener("submit", changeCity);
 
