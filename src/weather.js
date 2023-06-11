@@ -83,7 +83,7 @@ function showWeather(displayWeather) {
     let description = document.querySelector("#tempDescript");
     let humidity = document.querySelector("#humid");
     let windElement = document.querySelector("#slowWind");
-    let iconElement = document.querySelector("#icon");
+    let iconElement = document.querySelectorAll("#icon");
     document.querySelector("#city").innerHTML = displayWeather.data.name;
     document.querySelector("#secondCity").innerHTML = `${displayWeather.data.name} `;
 
