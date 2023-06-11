@@ -34,11 +34,11 @@ function search(city) {
 }
 
 //API Zipcode
-function searches(zipcode) {
+function searche(zipcode) {
     let api = "eaaeb210e95dc9ef485c92b37c060c09"
     let Urls = `https://api.openweathermap.org/data/2.5/weather?zip=${zipcode}&appid=${api}`;
 
-    axios.get(Urls).then(showZipcode);
+    axios.get(Urls).then(getZipcode);
 
 }
 
@@ -83,6 +83,14 @@ function showWeather(displayWeather) {
     windElement.innerHTML = `Wind ${WindyTemp} mph`;
     humidity.innerHTML = `Humidity ${displayWeather.data.main.humidity}%`;
     description.innerHTML = displayWeather.data.weather[0].description;
+}
+
+//Search by ZipCode
+function getZipcode(events) {
+    events.preventDefault()
+    let zipElements = docume.querySelector("#zipcodes")
+    zipElements = cityInput.value;
+    search(cityInput);
 }
 
 let searchFrom = document.querySelector("#searchForm");
