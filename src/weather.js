@@ -34,7 +34,7 @@ function search(city) {
 }
 
 //API Zipcode
-function searche(zipcode) {
+function search(zipcode) {
     let api = "eaaeb210e95dc9ef485c92b37c060c09"
     let Urls = `https://api.openweathermap.org/data/2.5/weather?zip=${zipcode}&appid=${api}`;
 
