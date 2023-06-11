@@ -100,9 +100,10 @@ body {
 #city {
   font-size: 35px;
 }
-a .name {
+a,
+#name {
   text-decoration: none;
   color: black;
-  font-size: 5px;
+  font-size: 10px;
   display: inline;
 }
