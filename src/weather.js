@@ -40,7 +40,6 @@ function searches(zipcode) {
 
     axios.get(Urls).then(showZipcode);
 
-    console.log(zipcode);
 }
 
 
@@ -89,7 +88,8 @@ function showWeather(displayWeather) {
 //Display ZipCodes
 function showZipcode(ShowZipcodes) {
     let zipCodess = document.querySelector("#zipcodes");
-    zipCodess.innerHTML = `${ShowZipcodes.zip}`;
+    let cityInput = document.querySelector("#searchCities").value;
+    zipCodess.innerHTML = cityInput.value;
 }
 
 let searchFrom = document.querySelector("#searchForm");
