@@ -103,8 +103,8 @@ function showWeather(displayWeather) {
 // Conversion from Celcius to Fahrenheit
 function showFahrenheitTemp(event) {
     event.preventDefault();
-    let fahrenheitTemp = (celciusTemperature - 32) * 5 / 9;
     let temperatureElement = document.querySelector("#tempForcast");
+    let fahrenheitTemp = (celciusTemperature - 32) * 5 / 9;
     temperatureElement.innerHTML = Math.round(fahrenheitTemp);
 
 }
