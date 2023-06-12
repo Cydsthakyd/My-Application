@@ -36,7 +36,7 @@ function search(city) {
 
 //Search ZipCode API
 function displayZipCode(callBack) {
-    callBack.preventDefaults();
+    callBack.preventDefault();
     navigator.geolocation.getCurrentPosition(searchZipcode);
 }
 
