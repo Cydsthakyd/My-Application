@@ -6,7 +6,7 @@
   border-top: 35%;
   background-image: url("https://images.unsplash.com/photo-1523882505971-5c29b55b695c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80");
   background-size: cover;
-  opacity: 1;
+  opacity: 1px;
 }
 
 .results {
