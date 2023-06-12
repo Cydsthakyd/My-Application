@@ -117,4 +117,5 @@ h3 {
 }
 #Fahrenheit {
   font-size: 20px;
+  position: absolute;
 }
