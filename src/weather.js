@@ -77,7 +77,7 @@ function changeCity(event) {
 }
 //Displays Weather
 function showWeather(displayWeather) {
-    let temperature = Math.round(celciusTemperature);
+    let temperature = Math.round(displayWeather.data.main.temp);
     let WindyTemp = Math.round(displayWeather.data.wind.speed);
     let temperatureElement = document.querySelector("#deg");
     let description = document.querySelector("#tempDescript");
@@ -89,7 +89,6 @@ function showWeather(displayWeather) {
     document.querySelector("#city").innerHTML = displayWeather.data.name;
     document.querySelector("#secondCity").innerHTML = `${displayWeather.data.name} `;
 
-    celciusTemperature = displayWeather.data.main.temp;
     temperatureElement.innerHTML = `${temperature}`;
     windElement.innerHTML = `Wind ${WindyTemp} mph`;
     humidity.innerHTML = `Humidity ${displayWeather.data.main.humidity}%`;
@@ -100,23 +99,11 @@ function showWeather(displayWeather) {
 
 }
 
-// Conversion from Celcius to Fahrenheit
-function showFahrenheitTemp(event) {
-    event.preventDefault();
-    let temperatureElement = document.querySelector("#tempForcast");
-    let fahrenheitTemp = (celciusTemperature - 32) * 5 / 9;
-    temperatureElement.innerHTML = Math.round(fahrenheitTemp);
-
-}
-let celciusTemperature = null;
 
 let searchFrom = document.querySelector("#searchForm");
 searchFrom.addEventListener("submit", changeCity);
 
 let bulleyeButton = document.querySelector("#location");
 bulleyeButton.addEventListener("click", displayCurrentLocation)
-
-let fahrenheitLink = document.querySelector("#tempsForcast");
-fahrenheitLink.addEventListener("click", showFahrenheitTemp)
 
 search("Atlanta");
