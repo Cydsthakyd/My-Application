@@ -52,7 +52,7 @@ function searchZipcode(zipcode) {
 
 //Displays Multiply Forecast
 function displayForecast() {
-    let forcastElement = document.querySelector("#weather-forcast");
+    let forcastElement = document.querySelector("#weather-forecast");
     forcastElement.innerHTML = `<div class="row">
             <div class="col-2">
               <div class="days">Tues</div>
