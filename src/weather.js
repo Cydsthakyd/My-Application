@@ -64,7 +64,7 @@ function displayForecast(response) {
             <div class="col-2">
               <div class="days">${forcasterDay.dt}</div>
               <img
-                src="https://openweathermap.org/img/wn/${forcasterDay.weather[0].icon}@2x.png"
+                src="http://openweathermap.org/img/wn/${forcasterDay.weather[0].icon}@2x.png"
                 alt="sunny cloud"
                 id="icon" />
               <div class="temp">
