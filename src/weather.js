@@ -53,7 +53,19 @@ function searchZipcode(zipcode) {
 //Displays Multiply Forecast
 function displayForecast() {
     let forcastElement = document.querySelector("#weather-forcast");
-    forcastElement.innerHTML = "forecast";
+    forcastElement.innerHTML = `<div class="row">
+            <div class="col-2">
+              <div class="days">Tues</div>
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                alt="sunny cloud"
+                id="icon" />
+              <div class="temp">
+                <span class="max" id="maxT">19°F</span>
+                <span class="min" id="lowT">16°F</span>
+              </div>
+            </div>
+          </div>`;
 }
 
 //Search Current Location
