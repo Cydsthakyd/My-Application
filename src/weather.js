@@ -53,8 +53,7 @@ function searchZipcode(zipcode) {
 //Displays Multiply Forecast
 function displayForecast() {
     let forcastElement = document.querySelector("#weather-forcast");
-
-    forcastElement.innerHTML = "Forecast";
+    forcastElement.innerHTML = "forecast";
 }
 
 //Search Current Location
