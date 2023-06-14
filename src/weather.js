@@ -52,21 +52,9 @@ function searchZipcode(zipcode) {
 
 //Displays Multiply Forecast
 function displayForecast() {
-    let forcastElement = documemt.querySelector("#weather-multi");
+    let forcastElement = documemt.querySelector("#weather");
 
-    forcastElement.innerHTML = `<div class="forcast" id="weather-multi">
-          <div class="row">
-            <div class="col-2">
-              <div class="days">Tues</div>
-              <img
-                src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-                alt="sunny cloud"
-                id="icon" />
-              <div class="temp">
-                <span class="max" id="maxT">19°F</span>
-                <span class="min" id="lowT">16°F</span>
-              </div>
-            </div>`;
+    forcastElement.innerHTML = "Forecast"
 }
 
 //Search Current Location
