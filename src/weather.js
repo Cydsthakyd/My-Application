@@ -102,7 +102,7 @@ function showWeather(displayWeather) {
     description.innerHTML = displayWeather.data.weather[0].description;
     iconElement.setAttribute("src", `https://openweathermap.org/img/wn/${displayWeather.data.weather[0].icon}@2x.png`);
     //
-    getForecast(displayWeather.data.coordinates);
+    //getForecast(displayWeather.data.coordinates);
 
 }
 
