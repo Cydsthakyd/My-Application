@@ -55,7 +55,7 @@ function displayForecast() {
     let forcastElement = document.querySelector("#weather-forecast");
 
     let forcastHTML = `<div class="row">`;
-    let dayWeek = ["Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"];
+    let dayWeek = ["Tues", "Wed", "Thur", "Fri", "Sat", "Sun"];
     dayWeek.forEach(function (week) {
         forcastHTML =
             forcastHTML + `
