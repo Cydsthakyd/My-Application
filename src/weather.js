@@ -54,7 +54,7 @@ function searchZipcode(zipcode) {
 function displayForecast() {
     let forcastElement = documemt.querySelector("#weather");
 
-    forcastElement.innerHTML = "Forecast"
+    forcastElement.innerHTML = "Forecast";
 }
 
 //Search Current Location
