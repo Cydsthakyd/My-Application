@@ -69,9 +69,6 @@ function displayForecast() {
             </div>`;
 }
 
-
-
-
 //Search Current Location
 function displayCurrentLocation(event) {
     event.preventDefault();
@@ -126,8 +123,7 @@ let searchFrom = document.querySelector("#searchForm");
 searchFrom.addEventListener("submit", changeCity);
 
 let bulleyeButton = document.querySelector("#location");
-bulleyeButton.addEventListener("click", displayCurrentLocation)
-
-displayForecast();
+bulleyeButton.addEventListener("click", displayCurrentLocation);
 
 search("Atlanta");
+displayForecast();
