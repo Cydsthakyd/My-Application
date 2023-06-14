@@ -91,7 +91,7 @@ function showWeather(displayWeather) {
     let humidity = document.querySelector("#humid");
     let windElement = document.querySelector("#slowWind");
     let iconElement = document.querySelector("#icons");
-    let iconElements = document.querySelector("#icon");
+    //let iconElements = document.querySelector("#icon");
 
     document.querySelector("#city").innerHTML = displayWeather.data.name;
     document.querySelector("#secondCity").innerHTML = `${displayWeather.data.name} `;
@@ -101,7 +101,7 @@ function showWeather(displayWeather) {
     humidity.innerHTML = `Humidity ${displayWeather.data.main.humidity}%`;
     description.innerHTML = displayWeather.data.weather[0].description;
     iconElement.setAttribute("src", `https://openweathermap.org/img/wn/${displayWeather.data.weather[0].icon}@2x.png`);
-    iconElements.setAttribute("alt", displayWeather.data.condition.icon_url);
+    //
     getForecast(displayWeather.data.coordinates);
 
 }
