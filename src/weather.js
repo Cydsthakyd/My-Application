@@ -53,7 +53,10 @@ function searchZipcode(zipcode) {
 //Displays Multiply Forecast
 function displayForecast() {
     let forcastElement = document.querySelector("#weather-forecast");
-    forcastElement.innerHTML = `<div class="row">
+
+    let forcastHTML = `<div class="row">`;
+    forcastHTML =
+        forcastHTML + `
             <div class="col-2">
               <div class="days">Tues</div>
               <img
@@ -65,7 +68,23 @@ function displayForecast() {
                 <span class="min" id="lowT">16°F</span>
               </div>
             </div>
-          </div>`;
+         `;
+    forcastHTML =
+        forcastHTML + `
+            <div class="col-2">
+              <div class="days">Tues</div>
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                alt="sunny cloud"
+                id="icon" />
+              <div class="temp">
+                <span class="max" id="maxT">19°F</span>
+                <span class="min" id="lowT">16°F</span>
+              </div>
+            </div>
+         `;
+    forcastHTML = forcastHTML + `</div>`;
+    forcastElement.innerHTML = forcastHTML;
 }
 
 //Search Current Location
