@@ -129,8 +129,8 @@ function showWeather(displayWeather) {
     humidity.innerHTML = `Humidity ${displayWeather.data.main.humidity}%`;
     description.innerHTML = displayWeather.data.weather[0].description;
     iconElement.setAttribute("src", `https://openweathermap.org/img/wn/${displayWeather.data.weather[0].icon}@2x.png`);
-    //
-    getForecast(displayWeather.data.coordinates);
+
+    getForecast(displayWeather.data.coord);
 
 }
 
