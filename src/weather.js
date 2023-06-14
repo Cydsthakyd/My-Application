@@ -51,23 +51,25 @@ function searchZipcode(zipcode) {
 
 
 //Displays Multiply Forecast
-function displayForecast() {
+function displayForecast(response) {
+    let forcaster = response.data.daily;
+
     let forcastElement = document.querySelector("#weather-forecast");
 
     let forcastHTML = `<div class="row">`;
-    let dayWeek = ["Tues", "Wed", "Thur", "Fri", "Sat", "Sun"];
-    dayWeek.forEach(function (week) {
+
+    forcaster.forEach(function (forcasterDay) {
         forcastHTML =
             forcastHTML + `
             <div class="col-2">
-              <div class="days">${week}</div>
+              <div class="days">${forcasterDay.dt}</div>
               <img
-                src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                src="https://openweathermap.org/img/wn/${forcasterDay.weather[0].icon}@2x.png"
                 alt="sunny cloud"
                 id="icon" />
               <div class="temp">
-                <span class="max" id="maxT">19°F</span>
-                <span class="min" id="lowT">16°F</span>
+                <span class="max" id="maxT">${forcasterDay.temp.max}°F</span>
+                <span class="min" id="lowT">${forcasterDay.temp.min}°F</span>
               </div>
             </div>
          `;
@@ -102,6 +104,12 @@ function changeCity(event) {
     citySecond.innerHTML = cityInput.value;
     search(cityInput);
 }
+function getForecast(coordinates) {
+    let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?
+lat=${coordinates.lat}&lon=${coordinates.lon}&appid=eaaeb210e95dc9ef485c92b37c060c09&units=imperial`
+    axios.get(apiUrl).then(displayForecast);
+}
+
 //Displays Weather
 function showWeather(displayWeather) {
     let temperature = Math.round(displayWeather.data.main.temp);
@@ -122,7 +130,7 @@ function showWeather(displayWeather) {
     description.innerHTML = displayWeather.data.weather[0].description;
     iconElement.setAttribute("src", `https://openweathermap.org/img/wn/${displayWeather.data.weather[0].icon}@2x.png`);
     //
-    //getForecast(displayWeather.data.coordinates);
+    getForecast(displayWeather.data.coordinates);
 
 }
 
@@ -134,4 +142,3 @@ let bulleyeButton = document.querySelector("#location");
 bulleyeButton.addEventListener("click", displayCurrentLocation);
 
 search("Atlanta");
-displayForecast();
