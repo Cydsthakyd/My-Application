@@ -105,7 +105,7 @@ function changeCity(event) {
     search(cityInput);
 }
 function getForecast(coordinates) {
-    let apiKey = `eaaeb210e95dc9ef485c92b37c060c09`;
+    let apiKey = `5aac6d0188c6f17d6d2bbe6591b6fef0`;
     let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
     axios.get(apiUrl).then(displayForecast);
 }
