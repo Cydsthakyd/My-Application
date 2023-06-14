@@ -52,7 +52,7 @@ function searchZipcode(zipcode) {
 
 //Displays Multiply Forecast
 function displayForecast() {
-    let forcastElement = documemt.querySelector("#weather-forecast");
+    let forcastElement = documemt.querySelector("#weather-forcast");
 
     forcastElement.innerHTML = "Forecast";
 }
