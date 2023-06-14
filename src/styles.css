@@ -59,7 +59,6 @@
 .temp,
 img {
   text-align: center;
-  margin-bottom: 5%;
 }
 .temp {
   padding-bottom: 15%;
@@ -125,4 +124,7 @@ h3 {
 
 #lowT {
   opacity: 0.6px;
+}
+#icon {
+  font-size: 15px;
 }
