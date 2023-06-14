@@ -54,6 +54,7 @@
 .days {
   position: relative;
   left: 23%;
+  font-size: 15px;
 }
 .temp,
 img {
@@ -110,6 +111,7 @@ a,
 
 #icons {
   margin: -26px 0;
+  font-size: 15px;
 }
 
 h3 {
