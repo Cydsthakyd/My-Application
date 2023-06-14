@@ -55,12 +55,12 @@ function displayForecast() {
     let forcastElement = document.querySelector("#weather-forecast");
 
     let forcastHTML = `<div class="row">`;
-    let dayWeek = ["Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"];
+    let dayWeek = ["Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"];
     dayWeek.forEach(function (week) {
         forcastHTML =
             forcastHTML + `
             <div class="col-2">
-              <div class="days">Tues</div>
+              <div class="days">${week}</div>
               <img
                 src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
                 alt="sunny cloud"
