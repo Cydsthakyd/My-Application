@@ -82,7 +82,7 @@ function displayForecast(response) {
 
             `
             <div class="col-2">
-              <div class="days">${formatDay(forcasterDay.dt - 2)}</div>
+              <div class="days">${formatDay(forcasterDay.dt(- 2))}</div>
               <img
                 src="http://openweathermap.org/img/wn/${forcasterDay.weather[0].icon}@2x.png"
                 alt="sunny cloud"
