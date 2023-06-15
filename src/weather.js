@@ -26,10 +26,10 @@ let day = days[now.getDay()];
 timerID.innerHTML = `${date} ${day} ${hours}:${minutes} ${twelve}`;
 
 
-//Format the days of the month
-function formatDays(timestamp) {
+//Format the days of the week
+function formatDay(timestamp) {
     let date = new Date(timestamp * 1000);
-    let day = date.getDate();
+    let day = date.getDay();
     let weekday = [
         "Mon",
         "Tue",
@@ -78,9 +78,11 @@ function displayForecast(response) {
 
     forcaster.forEach(function (forcasterDay) {
         forcastHTML =
-            forcastHTML + `
+            forcastHTML +
+
+            `
             <div class="col-2">
-              <div class="days">${formatDays(forcasterDay.dt)}</div>
+              <div class="days">${formatDay(forcasterDay.dt)}</div>
               <img
                 src="http://openweathermap.org/img/wn/${forcasterDay.weather[0].icon}@2x.png"
                 alt="sunny cloud"
