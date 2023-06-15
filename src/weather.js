@@ -86,7 +86,7 @@ function displayForecast(response) {
                 alt="sunny cloud"
                 id="icon" />
               <div class="temp">
-                <span class="max" id="maxT">Math.round${forcasterDay.temp.max}°F</span>
+                <span class="max" id="maxT">${forcasterDay.temp.max}°F</span>
                 <span class="min" id="lowT">${forcasterDay.temp.min}°F</span>
               </div>
             </div>
