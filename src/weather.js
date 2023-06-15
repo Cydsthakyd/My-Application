@@ -26,13 +26,13 @@ let day = days[now.getDay()];
 timerID.innerHTML = `${date} ${day} ${hours}:${minutes} ${twelve}`;
 
 
-//Format of the days of the month
+//Format the days of the month
 function formatDays(timestamp) {
     let date = new Date(timestamp * 1000);
     let day = date.getDate();
     let weekday = [
         "Mon",
-        "Tues",
+        "Tue",
         "Wed",
         "Thur",
         "Fri",
