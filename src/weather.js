@@ -82,14 +82,14 @@ function displayForecast(response) {
 
             `
             <div class="col-2">
-              <div class="days">${formatDay(forcasterDay.dt)}</div>
+              <div class="days">${formatDay(forcasterDay.dt - 2)}</div>
               <img
                 src="http://openweathermap.org/img/wn/${forcasterDay.weather[0].icon}@2x.png"
                 alt="sunny cloud"
                 id="icon" />
               <div class="temp">
-                <span class="max" id="maxT">${forcasterDay.temp.max}°F</span>
-                <span class="min" id="lowT">${forcasterDay.temp.min}°F</span>
+                <span class="max" id="maxT">${Math.round(forcasterDay.temp.max)}°F</span>
+                <span class="min" id="lowT">${Math.round(forcasterDay.temp.min)}°F</span>
               </div>
             </div>
          `;
