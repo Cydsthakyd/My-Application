@@ -68,7 +68,7 @@ function searchZipcode(zipcode) {
 }
 
 
-//Displays Multiply Forecast
+//Displays Multiple Forecast
 function displayForecast(response) {
     let forcaster = response.data.daily;
 
