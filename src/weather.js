@@ -27,10 +27,10 @@ timerID.innerHTML = `${date} ${day} ${hours}:${minutes} ${twelve}`;
 
 
 //Format of the days of the month
-function formatDays(date) {
-    let weekdays = new Date(date * 1000);
+function formatDays(dates) {
+    let days = new Date(dates * 1000);
 
-    let weekend = weekdays.getDate();
+    let weekend = days.getDate();
 
     let weekday = [
         "Mon",
@@ -40,9 +40,6 @@ function formatDays(date) {
         "Fri",
         "Sat",
         "Sun"];
-
-
-
     return weekday[weekend];
 }
 
