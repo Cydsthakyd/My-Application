@@ -62,7 +62,7 @@ img {
 }
 .temp {
   padding-bottom: 15%;
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .degree {
@@ -125,5 +125,6 @@ h3 {
   opacity: 0.6px;
 }
 #icon {
-  font-size: 15px;
+  margin-left: -5px;
+  width: 90px;
 }

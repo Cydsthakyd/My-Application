@@ -25,6 +25,25 @@ let day = days[now.getDay()];
 
 timerID.innerHTML = `${date} ${day} ${hours}:${minutes} ${twelve}`;
 
+function formatDays(date) {
+    let weekdays = new Date(date * 1000);
+    let weekend = weekdays.getDate();
+    let weekday = [
+        "Mon",
+        "Tues",
+        "Wed",
+        "Thur",
+        "Fri",
+        "Sat",
+        "Sun"];
+
+
+
+    return weekday[weekend];
+}
+
+
+
 // API call
 function search(city) {
     let apiKey = "eaaeb210e95dc9ef485c92b37c060c09"
@@ -62,13 +81,13 @@ function displayForecast(response) {
         forcastHTML =
             forcastHTML + `
             <div class="col-2">
-              <div class="days">${forcasterDay.dt}</div>
+              <div class="days">${formatDays(forcasterDay.dt)}</div>
               <img
                 src="http://openweathermap.org/img/wn/${forcasterDay.weather[0].icon}@2x.png"
                 alt="sunny cloud"
                 id="icon" />
               <div class="temp">
-                <span class="max" id="maxT">${forcasterDay.temp.max}°F</span>
+                <span class="max" id="maxT">Math.round${forcasterDay.temp.max}°F</span>
                 <span class="min" id="lowT">${forcasterDay.temp.min}°F</span>
               </div>
             </div>
