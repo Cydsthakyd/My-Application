@@ -76,13 +76,14 @@ function displayForecast(response) {
 
     let forcastHTML = `<div class="row">`;
 
-    forcaster.forEach(function (forcasterDay) {
-        forcastHTML =
-            forcastHTML +
+    forcaster.forEach(function (forcasterDay, index) {
+        if (index < 6) {
+            forcastHTML =
+                forcastHTML +
 
-            `
+                `
             <div class="col-2">
-              <div class="days">${formatDay(forcasterDay.dt(- 2))}</div>
+              <div class="days">${formatDay(forcasterDay.dt)}</div>
               <img
                 src="http://openweathermap.org/img/wn/${forcasterDay.weather[0].icon}@2x.png"
                 alt="sunny cloud"
@@ -93,7 +94,8 @@ function displayForecast(response) {
               </div>
             </div>
          `;
-    })
+        }
+    });
 
 
     forcastHTML = forcastHTML + `</div>`;
